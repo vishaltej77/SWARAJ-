@@ -16,7 +16,7 @@ SUPABASE_URL = os.getenv("SUPABASE_URL", "your_supabase_url_here")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY", "your_supabase_key_here")
 
 # Initialize Clients
-ai_client = None
+ai_client = "llama-3.3-70b-versatile"
 db = None
 
 try:
