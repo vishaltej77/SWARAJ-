@@ -1,7 +1,0 @@
-fastapi
-uvicorn
-twilio
-groq
-supabase
-python-dotenv
-python-multipart
