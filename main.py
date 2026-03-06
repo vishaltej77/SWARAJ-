@@ -16,7 +16,7 @@ SUPABASE_URL = os.getenv("SUPABASE_URL", "your_supabase_url_here")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY", "your_supabase_key_here")
 
 # Initialize Clients
-ai_client = "llama-3.3-70b-versatile"
+ai_client = None
 db = None
 
 try:
@@ -62,7 +62,7 @@ async def whatsapp_webhook(request: Request):
             raise Exception("AI client not initialized. Check your API keys.")
 
         completion = ai_client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama-3.3-70b-versatile",
             messages=[
                 {"role": "system", "content": MASTER_PROMPT},
                 {"role": "user", "content": raw_message}
